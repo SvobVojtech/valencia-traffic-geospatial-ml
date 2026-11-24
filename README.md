@@ -4,6 +4,14 @@ Can the urban context within 400 metres of a road segment help estimate its week
 
 I am developing this ongoing project during my Erasmus semester at Universitat Politècnica de València (UPV), in the MSc course *Big Data y minería de datos geoespaciales*, academic year 2026/2027. The technical proposal (Hito 1) and analytical design (Hito 2) define the study and document dataset construction. Model fitting and evaluation are pending.
 
+## Project materials
+
+- [Hito 1 project design](docs/01_project_design.md)
+- [Hito 2 data preparation and verified statistics](docs/02_data_preparation.md)
+- [Data preparation and audit notebook](notebooks/01_data_preparation.ipynb)
+- [Data sources, licences and availability](data/README.md)
+- [Figures and publication status](outputs/figures/README.md)
+
 ## Study design
 
 | Parameter | Setting |
@@ -25,7 +33,7 @@ The input panel contains 54 eligible observations per segment. The target calcul
 | Instituto Nacional de Estadística (INE) | 2023 population counts and census tract boundaries dated 1 January 2026 |
 | Renfe Open Data | Cercanías station coordinates |
 
-The original analysis runs in the course environment with its supplied inputs and support code. This repository documents the study and its progress. The working notebook and input data are kept locally.
+The public portfolio notebook implements the target calculation and audits the saved dataset when a local GeoParquet is available. The full spatial data preparation pipeline is not yet reproducible from the public notebook. The original workflow uses course-supplied inputs and support code kept locally.
 
 ## Feature engineering
 
@@ -47,7 +55,7 @@ The model will use predictors that can be computed for streets without traffic m
 
 The data stage produced **392 road segments and 22 columns**. Of these, **353 segments have a retained target** and **39 are candidates for later estimation**. Two additional segments met the traffic coverage threshold but lacked geometry and were excluded. All 13 candidate predictors are populated for the 392 spatial rows, and all 27 recorded data-stage checks passed.
 
-The assignment sheet gives **677 veh/h** as the reference median and **353 target-bearing / 39 application segments** as reference counts. The constructed dataset matches those counts. The notebook separately reports a descriptive median of **691 veh/h** for the 355 qualifying targets before the geometry join. The two medians refer to different stages of the workflow. There are no fitted models, validation scores, predictions or residual diagnostics yet.
+The assignment sheet gives **677 veh/h** as the reference median and **353 target-bearing / 39 application segments** as reference counts. The constructed dataset matches those counts and has a verified median of **677.04 veh/h**. The original working notebook separately reports a descriptive median of **691 veh/h** for the 355 qualifying targets before the geometry join. The two medians refer to different stages of the workflow. There are no fitted models, validation scores, predictions or residual diagnostics yet.
 
 ## Limitations and evaluation
 

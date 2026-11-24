@@ -1,7 +1,20 @@
-# Public allowlist. Add exact paths only after reviewing their contents.
-# Everything else stays local, including course guides and templates,
-# draw records and student lists, feedback and submissions, working notebooks,
-# data, generated outputs, browser profiles, credentials, and caches.
+# Ignore everything except reviewed portfolio files.
+# Within each open directory, keep new files ignored until explicitly allowed.
 /*
 !/.gitignore
 !/README.md
+!/docs/
+/docs/*
+!/docs/01_project_design.md
+!/docs/02_data_preparation.md
+!/notebooks/
+/notebooks/*
+!/notebooks/01_data_preparation.ipynb
+!/data/
+/data/*
+!/data/README.md
+!/outputs/
+/outputs/*
+!/outputs/figures/
+/outputs/figures/*
+!/outputs/figures/README.md
