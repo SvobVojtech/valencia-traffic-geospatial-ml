@@ -1,0 +1,7 @@
+# Public allowlist. Add exact paths only after reviewing their contents.
+# Everything else stays local, including course guides and templates,
+# draw records and student lists, feedback and submissions, working notebooks,
+# data, generated outputs, browser profiles, credentials, and caches.
+/*
+!/.gitignore
+!/README.md
